@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--&lt;!&ndash; 透明对话框 &ndash;&gt;-->
+    <!--<style name="TransparentDialog" parent="@android:style/Theme.Dialog">-->
+        <!--&lt;!&ndash; 设置边框 &ndash;&gt;-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--&lt;!&ndash; 浮现在activity之上 &ndash;&gt;-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--&lt;!&ndash; 设置无标题 &ndash;&gt;-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--&lt;!&ndash; 设置全屏 &ndash;&gt;-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--&lt;!&ndash; 设置半透明 &ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--&lt;!&ndash; 背景模糊 &ndash;&gt;-->
+        <!--<item name="android:backgroundDimEnabled">false</item>-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--&lt;!&ndash; 背景透明 &ndash;&gt;-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash; 半透明对话框 &ndash;&gt;-->
+    <!--<style name="TranslucentDialog" parent="@style/AlertDialog.AppCompat">-->
+        <!--&lt;!&ndash; 设置边框 &ndash;&gt;-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--&lt;!&ndash; 浮现在activity之上 &ndash;&gt;-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--&lt;!&ndash; 设置无标题 &ndash;&gt;-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--&lt;!&ndash; 设置全屏 &ndash;&gt;-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--&lt;!&ndash; 设置半透明 &ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--&lt;!&ndash; 背景模糊 &ndash;&gt;-->
+        <!--<item name="android:backgroundDimEnabled">true</item>-->
+        <!--&lt;!&ndash; 模糊系数 &ndash;&gt;-->
+        <!--<item name="android:backgroundDimAmount">0.6</item>-->
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>//点击无效位置自动退出-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash; 全屏对话框 &ndash;&gt;-->
+    <!--<style name="DialogFullScreen">-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+    <!--</style>-->
+
+
+    <!--<style name="SlideTopAnimStyle">-->
+        <!--<item name="android:windowEnterAnimation">@anim/abc_slide_in_top</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/abc_slide_out_top</item>-->
+    <!--</style>-->
+
+    <!--<style name="SlideBottomAnimStyle">-->
+        <!--<item name="android:windowEnterAnimation">@anim/abc_slide_in_bottom</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/abc_slide_out_bottom</item>-->
+    <!--</style>-->
+
+
+</resources>

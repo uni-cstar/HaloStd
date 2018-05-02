@@ -1,0 +1,3 @@
+1.Context -> ctx
+2.Intent -> it/ite  备注：在Kotlin的lambda表达式中，it为关键字，这种情况表达Intent变量使用intent/ite
+3.前缀命名开发规范
