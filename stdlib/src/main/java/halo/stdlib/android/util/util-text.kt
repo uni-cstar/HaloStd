@@ -20,12 +20,27 @@ import android.graphics.Paint
 import android.support.annotation.ColorInt
 import android.text.Spannable
 import android.text.SpannableStringBuilder
+import android.text.TextPaint
 import android.text.style.ForegroundColorSpan
 import android.widget.TextView
 
 /**
- * Created by Lucio on 18/1/19.
+ * 获取文本高度
  */
+fun getTextHeight(textSize: Float): Int {
+    val replyPaint = TextPaint()
+    replyPaint.isAntiAlias = true
+    replyPaint.textSize = textSize
+    return replyPaint.getTextHeight() + 2
+}
+
+/**
+ * 获取画笔绘制的文本高度
+ */
+fun TextPaint.getTextHeight(): Int {
+    val fm = fontMetrics
+    return Math.ceil((fm.descent - fm.ascent).toDouble()).toInt()
+}
 
 /**
  * 添加删除线

@@ -1,7 +1,7 @@
 package halo.stdlib.android.util
 
 import android.webkit.MimeTypeMap
-import halo.stdlib.kotlin.ext.getSuffix
+import halo.stdlib.kotlin.util.getSuffix
 import java.io.File
 
 
@@ -40,7 +40,7 @@ fun File.getSuffix(): String? {
 /**
  * 获取文件mimte type
  */
-fun File.getMimeType(file: File): String = file.name.getMimeType()
+fun File.getMimeType(): String = name.getMimeType()
 
 fun String.getMimeType(): String {
     val suffix = getSuffix() ?: return "file/*"

@@ -13,7 +13,7 @@ import android.view.View
 /**
  * 适用于GridView，支持在item之间设置任何类型的间距，支持控制是否显示上下左右间隔及是否绘制上下左右背景
  */
-class GridItemDecoration private constructor(builder: Builder)
+class ItemDecorationGrid private constructor(builder: Builder)
     : RecyclerView.ItemDecoration() {
 
     private val mDivider: Drawable?
@@ -263,8 +263,8 @@ class GridItemDecoration private constructor(builder: Builder)
             return this
         }
 
-        fun build(): GridItemDecoration {
-            return GridItemDecoration(this)
+        fun build(): ItemDecorationGrid {
+            return ItemDecorationGrid(this)
         }
     }
 }

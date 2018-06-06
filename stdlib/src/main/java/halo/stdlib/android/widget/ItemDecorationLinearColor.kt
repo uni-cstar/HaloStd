@@ -9,9 +9,9 @@ import android.support.v7.widget.LinearLayoutManager
  * 颜色 线性分割线
  */
 
-class ColorLinearItemDecoration @JvmOverloads constructor(space: Int,
-                                color: Int,
-                                orientation: Int = LinearLayoutManager.VERTICAL)
+class ItemDecorationLinearColor @JvmOverloads constructor(space: Int,
+                                                          color: Int,
+                                                          orientation: Int = LinearLayoutManager.VERTICAL)
     : BaseLinearItemDecoration(space, orientation) {
 
     private val mPaint: Paint

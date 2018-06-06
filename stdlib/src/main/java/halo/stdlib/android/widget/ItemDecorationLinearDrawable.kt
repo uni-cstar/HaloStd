@@ -8,7 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
  * Created by Lucio on 17/12/18.
  * 图片分割线
  */
-class DrawableLinearItemDecoration : BaseLinearItemDecoration {
+class ItemDecorationLinearDrawable : BaseLinearItemDecoration {
 
     val mDivider: Drawable
 

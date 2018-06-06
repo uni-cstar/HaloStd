@@ -9,9 +9,8 @@ import android.text.TextWatcher
 
 abstract class LiteTextWatcher : TextWatcher {
 
-    override fun afterTextChanged(s: Editable?) {
-    }
+    override fun afterTextChanged(s: Editable?) = Unit
 
-    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-    }
+    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+
 }

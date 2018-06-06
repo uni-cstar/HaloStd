@@ -14,6 +14,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import halo.stdlib.kotlin.BestPerformance
+import halo.stdlib.kotlin.util.orDefault
 import halo.stdlib.kotlin.util.orDefaultIfNullOrEmpty
 import java.io.File
 import java.io.IOException
@@ -74,7 +75,7 @@ fun Context.mediaScannerScanFile(uri: Uri) {
  */
 fun Context.mediaScannerScanFile(file: File, callback: MediaScannerConnection.OnScanCompletedListener?) {
     val path = file.absolutePath
-    val mimeType = getMimeType(file)
+    val mimeType = file.getMimeType()
     mediaScannerScanFile(arrayOf(path), arrayOf(mimeType), callback)
 }
 
@@ -82,7 +83,7 @@ fun Context.mediaScannerScanFile(file: File, callback: MediaScannerConnection.On
  * 扫描指定媒体文件
  */
 fun Context.mediaScannerScanFile(path: String, callback: MediaScannerConnection.OnScanCompletedListener?) {
-    val mimeType = getMimeType(path)
+    val mimeType = path.getMimeType()
     mediaScannerScanFile(arrayOf(path), arrayOf(mimeType), callback)
 }
 

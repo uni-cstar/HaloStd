@@ -6,10 +6,57 @@ import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
+import android.support.annotation.ColorInt
+import android.text.Layout
+import android.text.StaticLayout
+import android.text.TextPaint
 import android.util.Base64
 import halo.BuildConfig
 import halo.stdlib.kotlin.util.Try
 import java.io.ByteArrayOutputStream
+
+/**
+ * 生成文字图片
+ * @param texString 文本内容
+ * @param textSize 文本大小
+ * @param textColor 文本颜色
+ */
+fun createTextBitmap(texString: String,
+                     textSize: Float,
+                     @ColorInt textColor: Int): Bitmap? {
+    try {
+        val replyPaint = TextPaint()
+        replyPaint.isAntiAlias = true
+        replyPaint.textSize = textSize
+        replyPaint.color = textColor
+
+        // 获取文本宽高
+        val textHeight = replyPaint.getTextHeight() + 2
+        val textWidth = replyPaint.measureText(texString).toInt() + 6
+
+        return createTextBitmap(textWidth, textHeight, texString, replyPaint)
+    } catch (e: Exception) {
+        return null
+    }
+}
+
+/**
+ * 生成文字图片
+ * @param width 图片宽度
+ * @param height 图片高度
+ * @param text 图片内容
+ * @param paint 文字画笔
+ * @param config 图片设置
+ */
+@JvmOverloads
+fun createTextBitmap(width: Int, height: Int, text: String, paint: TextPaint, config: Bitmap.Config = Bitmap.Config.ARGB_4444): Bitmap {
+    val newBitmap = Bitmap.createBitmap(width, height, config)
+    val canvas = Canvas(newBitmap)
+    val sl = StaticLayout(text, paint, newBitmap.width,
+            Layout.Alignment.ALIGN_CENTER, 1.0f, 0.0f, false)
+    sl.draw(canvas)
+    return newBitmap
+}
 
 /**
  * 缩放图片
