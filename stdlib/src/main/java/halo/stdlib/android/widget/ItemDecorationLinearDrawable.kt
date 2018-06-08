@@ -16,13 +16,14 @@ class ItemDecorationLinearDrawable : BaseLinearItemDecoration {
      * 此方法待测
      * @param divider 如果是用xml写的drawable，则需要定义size节点指明高度
      */
-    constructor(divider: Drawable, orientation: Int = LinearLayoutManager.VERTICAL)
-            : super(if (orientation == LinearLayoutManager.HORIZONTAL) divider.intrinsicWidth else divider.intrinsicHeight, orientation) {
+    constructor(divider: Drawable, orientation: Int = LinearLayoutManager.VERTICAL, drawBeginning: Boolean = false)
+            : super(if (orientation == LinearLayoutManager.HORIZONTAL) divider.intrinsicWidth else divider.intrinsicHeight, orientation, drawBeginning) {
         mDivider = divider
     }
 
-    constructor(divider: Drawable, space: Int, orientation: Int = LinearLayoutManager.VERTICAL)
-            : super(space, orientation) {
+    @JvmOverloads
+    constructor(divider: Drawable, space: Int, orientation: Int = LinearLayoutManager.VERTICAL, drawBeginning: Boolean = false)
+            : super(space, orientation, drawBeginning) {
         mDivider = divider
     }
 

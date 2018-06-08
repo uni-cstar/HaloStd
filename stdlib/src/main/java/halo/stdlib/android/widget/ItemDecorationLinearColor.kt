@@ -11,8 +11,9 @@ import android.support.v7.widget.LinearLayoutManager
 
 class ItemDecorationLinearColor @JvmOverloads constructor(space: Int,
                                                           color: Int,
-                                                          orientation: Int = LinearLayoutManager.VERTICAL)
-    : BaseLinearItemDecoration(space, orientation) {
+                                                          orientation: Int = LinearLayoutManager.VERTICAL,
+                                                          drawBeginning: Boolean = false)
+    : BaseLinearItemDecoration(space, orientation, drawBeginning) {
 
     private val mPaint: Paint
 
