@@ -118,21 +118,21 @@ class ItemDecorationLinearBlock private constructor(builder: Builder) : Recycler
 
                         blockDividerDrawable?.setBounds(left, top, right, bottom)
                         blockDividerDrawable?.draw(c)
-                        if (blockMarginDrawable != null) {
+                        blockMarginDrawable?.run {
                             if (blockDividerLeftMargin > 0) {
                                 //填充左侧透明区域
                                 val leftMarginRight = left
                                 val leftMarginLeft = leftMarginRight - blockDividerLeftMargin
-                                blockMarginDrawable?.setBounds(leftMarginLeft, top, leftMarginRight, bottom)
-                                blockDividerDrawable?.draw(c)
+                                setBounds(leftMarginLeft, top, leftMarginRight, bottom)
+                                draw(c)
                             }
 
                             if (blockDividerRightMargin > 0) {
                                 //填充右侧透明区域
                                 val leftMarginLeft = right
                                 val leftMarginRight = leftMarginLeft + blockDividerRightMargin
-                                blockMarginDrawable?.setBounds(leftMarginLeft, top, leftMarginRight, bottom)
-                                blockDividerDrawable?.draw(c)
+                                setBounds(leftMarginLeft, top, leftMarginRight, bottom)
+                                draw(c)
                             }
                         }
                     }
